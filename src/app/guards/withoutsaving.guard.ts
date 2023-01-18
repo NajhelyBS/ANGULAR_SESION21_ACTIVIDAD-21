@@ -11,7 +11,18 @@ export class WithoutsavingGuard implements CanDeactivate<unknown> {
     currentRoute: ActivatedRouteSnapshot,
     currentState: RouterStateSnapshot,
     nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+    
+      if(this.dataUser()){
+        return true;
+      }
+      
+      return confirm("No has guardado tus datos, ¿Quiéres continuar de todos modos?")
+   
+  }
+  dataUser():boolean{
+    return false; ;
   }
   
 }
+  
+
