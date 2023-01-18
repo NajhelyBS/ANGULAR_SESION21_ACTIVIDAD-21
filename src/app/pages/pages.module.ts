@@ -14,6 +14,11 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [ 
+    LoginComponent,
+    PostComponent,
+    HomeComponent,
   ]
 })
 export class PagesModule { }

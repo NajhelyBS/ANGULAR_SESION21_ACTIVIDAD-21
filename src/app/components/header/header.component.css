@@ -1,0 +1,24 @@
+.navbar-brand {
+    color: white;
+    font-weight: 900;
+}
+
+.nav-link {
+    color: rgb(87, 85, 78);
+}
+
+.nav-link {
+    margin-right: 1.8em;
+    letter-spacing: 1.4px;
+    font-weight: 500;
+    border-bottom: solid  rgb(16, 139, 5);
+}
+.item{
+    background: #2294ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3374ee, #22aeff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3365ee, #229cff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: aliceblue;
+    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 0.6px  rgb(22, 13, 107);
+}
