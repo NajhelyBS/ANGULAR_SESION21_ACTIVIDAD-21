@@ -6,10 +6,20 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PermisoGuard implements CanActivate {
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+  canActivate(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    
+    if (this.CorrectLogin()){
+      return true;
+    } else {
+      alert("Para entrar a esta sección debes iniciar sesión primero");
+      return false;
+    }
+
   }
+
   
+
+  CorrectLogin(){
+    return false; //probando
+  }
 }
