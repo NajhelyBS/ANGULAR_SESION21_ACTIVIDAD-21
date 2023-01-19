@@ -20,6 +20,8 @@ export class PermisoGuard implements CanActivate {
   
 
   CorrectLogin(){
+    
+
     return false; //probando
   }
 }

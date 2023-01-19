@@ -1,0 +1,30 @@
+body {
+    background-color: transparent;
+   height: 90vh;
+}
+
+section {
+    margin-top: 5em;
+    background: linear-gradient(to right,#00c3ff86, #ffff1c7c);
+    height: 15em;
+    
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 900;
+    -webkit-text-stroke-color:rgba(252, 234, 77, 0.753) ;
+    -webkit-text-stroke-width: 2px;
+    text-shadow: 2px 7px 2px rgb(16, 139, 5);
+
+}
+
+h5 {
+    color: rgb(70, 6, 6);
+
+}
+
+h4{
+    text-shadow: 0px 0px 3px rgb(16, 139, 5);
+    color:rgb(11, 73, 5);
+}

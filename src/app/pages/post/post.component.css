@@ -1,0 +1,43 @@
+body {
+ background-color: transparent;
+ height: 80vh
+ ;
+}
+
+section {
+    padding-top: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+
+}
+h2 {
+    font-size: 45px;
+    font-weight: 900;
+    -webkit-text-stroke-color:rgba(252, 234, 77, 0.753) ;
+    -webkit-text-stroke-width: 2px;
+    text-shadow: 2px 7px 2px rgb(16, 139, 5);
+}
+
+p {
+    color: rgb(70, 6, 6);
+    font-weight: 700;
+}
+
+.text {
+    color: rgb(70, 6, 6);
+    font-weight: 700;
+    padding-right: 3em;
+    border: dashed 3px green;
+}
+
+#p {
+    padding-left: 3em;
+}
+input {
+    width: 20em;
+}
+
+img {
+    border-radius: 50px;
+    box-shadow: 3px 4px 3px 2px rgb(252, 234, 77);
+}
