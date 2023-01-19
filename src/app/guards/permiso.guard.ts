@@ -9,16 +9,16 @@ import Swal from 'sweetalert2'
 })
 export class PermisoGuard implements CanActivate {
   canActivate(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    
-  if(this.isLog()){
-    return true;
-  }else {
-    return true; 
-  }
+
+    if(this.dataUser()){
+      return true;
+    }else {
+      return true;
+    }
 }
 
-isLog():boolean{
-return true; ;
+dataUser():boolean{
+  return false; ;
 }
 
 }

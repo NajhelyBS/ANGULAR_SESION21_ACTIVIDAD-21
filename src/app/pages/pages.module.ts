@@ -9,6 +9,7 @@ import { RouterLinkActive } from '@angular/router';
 import { FormularioComponent } from './formulario/formulario.component';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import {MatInputModule} from '@angular/material/input';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatGridListModule,
   ],
   exports: [ 
     LoginComponent,
