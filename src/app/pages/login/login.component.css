@@ -1,39 +1,45 @@
 body {
     background-color: transparent;
+    height: 80vh;
 }
 
-#notificacion {
-    width: 30em;
-    border: rgba(255, 0, 0, 0.527) 3px solid;
-    background-color: rgba(219, 122, 122, 0.911);
-    color: rgb(70, 6, 6);
-}
 
 form {
-    width: 30em;
+    width: 50em;
 }
 
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+
+  mat-label {
+    color: #311804;
+    font-weight: bolder;
+  }
+  
 p{
     font-size: 45px;
-    font-weight: 900;
+    font-weight: bolder;
     -webkit-text-stroke-color:rgba(252, 234, 77, 0.753) ;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     text-shadow: 2px 7px 2px rgb(16, 139, 5);
+    letter-spacing: 2px;
 
 }
 
-label {
-    color: #311804;
-    font-size: 20px;
-    font-weight: 700;
-    text-shadow: 0px 0px 6px rgb(219 231 255);
+mat-error {
+    background-color: #00c3ff4b;
+    border-radius: 20px;
+    color: #700707;
 }
 
-input {
-    background-color: #ffffffa6;
-    box-shadow: 0 0 4px 2px #fcea4dc0;
-    font-weight: 600;
-}
 
 button {
     background: #00c3ff;

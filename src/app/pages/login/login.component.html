@@ -1,32 +1,47 @@
 <body>
     <main class="d-flex justify-content-center">
     
+        
+<!-- Material Input - form -->
+    <form class="example-form pb-5" [formGroup]="formLogin"  >
 
-    <form class="pb-5" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+        <p class="text-center pt-3 text-primary ">Iniciar Sesión</p>
 
-        <div  *ngIf="show" class=" py-3 rounded" id="notificacion">
-            <h4  style="font-weight:300" class="text-center"> Username or password is incorrect </h4>
-        </div>
-
-        <p class="text-center pt-2 text-primary ">Iniciar Sesión</p>
 
         <!-- UserName -->
-        <label >UserName: </label>
-        <input type="text" class="form-control py-2 mt-3"
-        formControlName="username" #username> 
+        <div class="mt-5">
+        <mat-form-field class="example-full-width">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Admin" [formControl]="user" id="user" [errorStateMatcher]="matcher">
+          </mat-form-field>
+          <mat-error *ngIf="user.hasError('required')">
+            An username is <strong>required</strong>
+          </mat-error>
+
+
+        </div>
         
 
         <br>
         <!-- Password -->
-        <label class="mt-3" >Password: </label>
-        <input type="password" class="form-control py-2 mt-3"
-        formControlName="password" #password>
+        <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="123456" [formControl]="pass"id="pass"  [errorStateMatcher]="matcher" >
+          </mat-form-field>
+          <mat-error *ngIf="user.hasError('required')">
+              A password is <strong>required</strong>
+          </mat-error>
+        </div>
 
         <br>
+        
+<!-- /Material Input - form --> 
+     
 
         <!--Buttton -->
         <div class="d-flex justify-content-center">
-        <button class="form-control mt-4 py-2 mb-3" (click)="validar(username.value, password.value); Redirigir()" 
+        <button class="form-control mt-4 py-2 mb-3" (click)="validacion()"
         >Login</button>
         
         </div>

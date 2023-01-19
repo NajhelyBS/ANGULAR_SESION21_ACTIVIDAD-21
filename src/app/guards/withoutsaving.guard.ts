@@ -17,7 +17,7 @@ export class WithoutsavingGuard implements CanDeactivate<unknown> {
       if(this.dataUser()){
         return true;
       }else {
-        return confirm("No has guardado tus datos, ¿Quiéres continuar de todos modos?");
+        return confirm("Estás seguro que quieres cerrar sesión?");
       }
   }
 

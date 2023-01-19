@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroupDirective, NgForm, FormGroup, Validators, FormControl } from '@angular/forms';
+import { Route, Router } from '@angular/router';
+import {ErrorStateMatcher} from '@angular/material/core';
+import Swal from 'sweetalert2'
+
 
 
 @Component({
@@ -7,52 +11,58 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent  {
 
+  
   public formLogin!: FormGroup;
-  show = false;
+  submitted = false;
+  logeado!:string;
+  isLog = true;
+  username:string ="";
+  password:string = "";
 
-  constructor(private formBuilder:FormBuilder){}
+  constructor(private formBuilder:FormBuilder, private router:Router){}
 
-  ngOnInit() {
-    this.formLogin = this.formBuilder.group({
-      username:['', 
-        [
-          Validators.required,
-          Validators.email
-        ]
-      ],
-      password:['', 
-        [
-          Validators.required,
-          Validators.minLength(8),
-        ]
-      ],
-    })
-    
+  user = new FormControl('', [Validators.required]);
+  pass = new FormControl('', [Validators.required]);
+
+  matcher = new ErrorStateMatcher();
+
+
+  validacion() {
+   
+    this.username = (<HTMLInputElement>document.getElementById("user")).value;
+    this.password = (<HTMLInputElement>document.getElementById("pass")).value;
+
+    if(this.username == "Admin" && this.password == "123456"){
+      localStorage.setItem('username', this.username);
+      localStorage.setItem('password', this.password);
+      this.isLog = true;
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Sesión iniciada con éxito',
+        showConfirmButton: false,
+        timer: 1500
+      });
+      this.router.navigate(['/home']);   
+
+    }else {
+      localStorage.clear();
+      Swal.fire({
+        icon:'error',
+        title:'Username or password is incorrect',
+        heightAuto: false
+      })
     }
     
-onSubmit() {
-  
-}
-
-user = "Usuario" ;
-contraseña = "Contraseña";
-
-
-validar(username:string, password:string){
-  
-  if(username==this.user && password==this.contraseña){
-    localStorage.setItem('username',this.user);
-    localStorage.setItem('password',this.contraseña);
-    this.show = false;
-    console.log('inicio de sesion exitos')
-  }else {
-    this.show = true;
   }
+
+  
+
 }
 
-Redirigir(){
-  
-}
-}
+
+
+
+

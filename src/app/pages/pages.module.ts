@@ -8,6 +8,8 @@ import { RouterLink } from '@angular/router';
 import { RouterLinkActive } from '@angular/router';
 import { FormularioComponent } from './formulario/formulario.component';
 import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -18,8 +20,11 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
+    RouterLink,
+    RouterLinkActive,
     FormsModule,
     ReactiveFormsModule,
+    MatInputModule,
   ],
   exports: [ 
     LoginComponent,
