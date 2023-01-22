@@ -19,12 +19,9 @@
         </ul>
 
         <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end">
-            <li class="nav-item ">
-                <a class="nav-link" [routerLink]="'/'" routerLinkActive="item" [routerLinkActiveOptions]="{exact: true}" >Login</a>
-              </li>
-
+          
           <li class="nav-item ">
-                <a class="nav-link" [routerLink]="'login'"  routerLinkActive="item" >Logout</a>
+                <a class="nav-link" [routerLink]="'login'"  routerLinkActive="item" [routerLinkActiveOptions]="{exact: true}"  (click)="borrardata()">Logout</a>
               </li>
         </ul>
     

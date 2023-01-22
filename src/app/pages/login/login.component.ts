@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroupDirective, NgForm, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import {ErrorStateMatcher} from '@angular/material/core';
+// ES6 Modules or TypeScript
 import Swal from 'sweetalert2'
 
 
@@ -17,7 +18,7 @@ export class LoginComponent  {
   public formLogin!: FormGroup;
   submitted = false;
   logeado!:string;
-  isLog = true;
+  isLog = "true";
   username:string ="";
   password:string = "";
 
@@ -31,13 +32,18 @@ export class LoginComponent  {
 
   validacion() {
    
+    //obteniendo datos ingresados
     this.username = (<HTMLInputElement>document.getElementById("user")).value;
     this.password = (<HTMLInputElement>document.getElementById("pass")).value;
 
+    //username = Admin && passwor= 123456
     if(this.username == "Admin" && this.password == "123456"){
+      this.isLog = "true";
       localStorage.setItem('username', this.username);
       localStorage.setItem('password', this.password);
-      this.isLog = true;
+      localStorage.setItem('isLog', this.isLog);
+
+      //alert iniciado con éxito
       Swal.fire({
         position: 'top-end',
         icon: 'success',
@@ -49,6 +55,7 @@ export class LoginComponent  {
 
     }else {
       localStorage.clear();
+      //alert fallo
       Swal.fire({
         icon:'error',
         title:'Username or password is incorrect',

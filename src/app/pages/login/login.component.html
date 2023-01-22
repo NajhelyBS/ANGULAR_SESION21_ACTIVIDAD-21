@@ -5,7 +5,11 @@
 <!-- Material Input - form -->
     <form class="example-form pb-5" [formGroup]="formLogin"  >
 
-        <p class="text-center pt-3 text-primary ">Iniciar Sesión</p>
+        <p class="text-center pt-3 text-primary ">
+          <span> <mat-icon fontIcon="local_florist"></mat-icon></span>
+          Iniciar Sesión
+          <span> <mat-icon fontIcon="local_florist"></mat-icon></span>
+        </p>
 
 
         <!-- UserName -->
@@ -26,6 +30,7 @@
         <!-- Password -->
         <div>
         <mat-form-field class="example-full-width">
+            
             <mat-label>Password</mat-label>
             <input matInput placeholder="123456" [formControl]="pass"id="pass"  [errorStateMatcher]="matcher" >
           </mat-form-field>

@@ -14,17 +14,12 @@ export class WithoutsavingGuard implements CanDeactivate<unknown> {
     currentState: RouterStateSnapshot,
     nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     
-      if(this.dataUser()){
-        return true;
-      }else {
-        return confirm("Estás seguro que quieres cerrar sesión?");
-      }
-  }
+    this.formData()    ;
+    return true
+    }
 
-  dataUser():boolean{
-    return false; ;
-  }
-  
+    formData() {
+      return true;
+    }
+
 }
-  
-

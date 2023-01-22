@@ -1,6 +1,6 @@
 body {
  background-color: transparent;
- height: 88vh;
+ height: 86vh;
 }
 
 section {
@@ -29,12 +29,15 @@ p {
     padding-right: 3em;
     border: dashed 3px green;
 }
-
+#parrafo {
+    width: 40em;
+    padding: 3em;
+}
 #p {
     padding-left: 3em;
 }
 input {
-    width: 20em;
+    width: 10em;
 }
 
 img {
