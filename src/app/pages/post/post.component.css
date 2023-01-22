@@ -1,6 +1,6 @@
 body {
  background-color: transparent;
- height: 86vh;
+ height: 45em;
 }
 
 section {
@@ -36,15 +36,31 @@ p {
 #p {
     padding-left: 3em;
 }
-input {
-    width: 10em;
-}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
 
-img {
-    border-radius: 50px;
-    box-shadow: 3px 4px 3px 2px rgb(252, 234, 77);
+mat-card {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 
 mat-grid-tile {
-    background: lightblue;
+    background: rgba(173, 216, 230, 0.596);
+    height: 34em;
   }
+
+  .example-card {
+    max-width: 500px;
+}
+  
+  .example-header-image {
+    background-image: url('https://avatars.githubusercontent.com/u/118542051?v=4');
+    background-size: cover;
+  }
+

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-post',
@@ -8,4 +9,7 @@ import { Component } from '@angular/core';
 export class PostComponent {
 
   text ="";
+
+  
+
 }

@@ -11,6 +11,11 @@ import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatChipsModule} from '@angular/material/chips';
+
+
 
 
 @NgModule({
@@ -29,6 +34,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatInputModule,
     MatGridListModule,
     MatIconModule,
+    MatCardModule,
+    MatButtonModule,
+    MatChipsModule,
   ],
   exports: [ 
     LoginComponent,
